@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a22838a8-deb1-441d-9112-bf4a0879499d}</ProjectGuid>
+    <RootNamespace>BaseRust</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;BASERUST_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;BASERUST_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;BASERUST_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;BASERUST_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\Core.hpp" />
+    <ClInclude Include="Core\Dependencies\Il2cpp\CRT\CRT.hpp" />
+    <ClInclude Include="Core\Dependencies\Il2cpp\Il2CPPSDK.hpp" />
+    <ClInclude Include="Core\Dependencies\Il2cpp\IMPORTER\Importer.hpp" />
+    <ClInclude Include="Core\Dependencies\Il2cpp\IMPORTER\saphimporter.hpp" />
+    <ClInclude Include="Core\Dependencies\Il2cpp\PATTERN\Pattern.hpp" />
+    <ClInclude Include="Core\Dependencies\Misc\List.hpp" />
+    <ClInclude Include="Core\Dependencies\Misc\Variables.hpp" />
+    <ClInclude Include="Core\Dependencies\String\String.hpp" />
+    <ClInclude Include="Core\Dependencies\Vector\Vector.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\AimConeUtil.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\AttackEntity.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\BaseCombatEntity.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\BaseEntity.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\BaseMovement.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\BaseNetworkable.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\BasePlayer.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\BaseProjectile.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\GameObject.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\GamePhysics.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Graphics.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\HitTest.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Item.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\ItemContainer.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\ItemDefinition.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\LocalPlayer.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Magazine.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\MainMenuSystem.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Model.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\ModelState.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\PlayerEyes.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\PlayerInventory.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\PlayerModel.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\PlayerProjectileUpdate.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\PlayerTick.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\PlayerWalkMovement.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Projectile.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\ProjectileWeaponMod.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\RigidBody.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Terrain.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\TerrainCollision.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\TerrainHeightMap.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\TerrainMeta.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Unity\Camera.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Unity\Component.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Unity\Cursor.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Unity\DDraw.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Unity\Event.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Unity\GL.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Unity\GUI.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Unity\GUIContent.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Unity\GUIStyle.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Unity\Input.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Unity\Material.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Unity\Mathf.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Unity\Physics.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Unity\Screen.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Unity\Shader.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Unity\Texture2D.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Unity\Time.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\Unity\Transform.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Classes\WaterLevel.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Enums\Enums.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Enums\Structs\Structs.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Function\Features\Drawing\Drawing.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Function\Hooks\Client\AimUtils\Antihack\Antihack.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Function\Hooks\Client\AimUtils\Antihack\projectile.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Function\Hooks\Client\AimUtils\Manipulation.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Function\Hooks\Client\AimUtils\Prediction.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Function\Hooks\Client\ClientInput.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Function\Hooks\Client\ClientMovement.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Function\Hooks\Client\MainMenuSystem.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Function\Hooks\Client\OnGUI.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Function\Hooks\Client\PerformanceUpdate.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Function\Hooks\Client\AimUtils\ServerRPCProjectileShoot.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Hooking\Hooks.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Hooking\Library\Library.hpp" />
+    <ClInclude Include="Core\Rust\SDK\Hooking\LoadHooks.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Core\Rust\SDK\Classes\ExplosionsFPS.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
